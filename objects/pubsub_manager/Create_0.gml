@@ -76,7 +76,7 @@ unsubscribe = function(_id, _event) {
 unsubscribe_all = function(_id) {
 	var _keys_array = variable_struct_get_names(event_struct);
 	for (var i = (array_length(_keys_array) - 1); i >= 0; i -= 1) {
-		unsubscribe(_keys_array[i], _id);
+		unsubscribe(_id, _keys_array[i]);
 	}
 }
 
